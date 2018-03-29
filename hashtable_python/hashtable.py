@@ -1,5 +1,6 @@
 # Author:       Joseph Tompkins
 # Date:         03/29/2018
+# Python:       3.5+
 # Description:  A very simple hash table implementation which uses a slightly modified SDBM hash function.
 #               This function was chosen for its speed, simplicity, low number of collisions,
 #               and decent hash distribution.
