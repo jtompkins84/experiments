@@ -1,8 +1,15 @@
-# Author: Joseph Tompkins
-#
+# Author:       Joseph Tompkins
+# Date:         03/29/2018
+# Description:  A very simple hash table implementation which uses a slightly modified SDBM hash function.
+#               This function was chosen for its speed, simplicity, low number of collisions,
+#               and decent hash distribution.
+#               This script is a learning exercise, and not meant for actual use.
 
 
 __all__ = ['hashcode', 'hashtable']
+
+
+from collections import Iterable
 
 
 def hashcode(key):
@@ -11,6 +18,7 @@ def hashcode(key):
     Uses the SDBM hash function.
     """
     hash = 0
+    key = str(key).encode('utf-8')
     _bytes = bytearray(bytes(key))
     for byte in _bytes:
         byte = byte << 8
